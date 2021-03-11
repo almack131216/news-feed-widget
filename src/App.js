@@ -1,7 +1,7 @@
 import React from 'react';
 import { LanguageProvider } from './containers/Language';
 import LanguageSelector from './components/LanguageSelector';
-import Explore from './components/Explore';
+import Intro from './components/Intro';
 import Carousel from './components/Carousel/Carousel';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
           <LanguageSelector />
         </header>
         
-        <Explore />
+        <Intro />
         <Carousel />
       </div>
     </LanguageProvider>

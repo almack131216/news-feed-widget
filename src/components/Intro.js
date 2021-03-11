@@ -4,7 +4,7 @@ import { Text, LanguageContext } from '../containers/Language';
 
 const selectOptions = ['option1', 'option2', 'option3'];
 
-export default function Explore() {
+export default function Intro() {
   const [clickText, setClickText] = useState();
   const [selectedOption, setSelectedOption] = useState();
   const { dictionary } = useContext(LanguageContext);
@@ -19,18 +19,11 @@ export default function Explore() {
 
   return (
     <div>
-      <h1><Text tid="exploreHeader" /></h1>
-      <p><Text tid="welcomeDescription" /></p>
+      <h1><Text tid="mainHeader" /></h1>
+      <p><Text tid="mainDescription" /></p>
 
       <div>
-        <input type="text" placeholder={dictionary.enterText} />
-        <button onClick={handleClick}>
-          <Text tid="clickMe" />
-        </button>
-        <p>{clickText}</p>
-      </div>
-
-      <div>
+      <Text tid="selectStyle" />
         <select
           onChange={handleOptionChange}
           value={selectedOption}
@@ -43,9 +36,6 @@ export default function Explore() {
         </select>
       </div>
 
-      <a href="https://halilcanozcelik.com" target="_blank" rel="noopener noreferrer">
-        <Text tid="aboutMe" />
-      </a>
     </div>
   );
 }
